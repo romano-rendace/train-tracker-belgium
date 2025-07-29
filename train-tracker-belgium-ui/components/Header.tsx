@@ -9,10 +9,13 @@ const Header = () => {
                 <Link href={"/"} className="hover:underline" >
                     Home
                 </Link>
+                <Link href={"/stations"} className="hover:underline">
+                    Stations
+                </Link>
                 <Link href={"/trains"} className="hover:underline">
                     Trains
                 </Link>
-                <Link href={"about"} className="hover:underline">
+                <Link href={"/about"} className="hover:underline">
                     About
                 </Link>
             </nav>
