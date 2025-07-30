@@ -1,4 +1,5 @@
-import type {Station, StationApiResponse} from "../../types/stations"
+import type { Station } from "../../types/station"
+import type { StationApiResponse } from "../../types/station.api";
 
 export async function fetchStations(): Promise<Station[]> {
     const result = await fetch(" https://api.irail.be/stations/?format=json&lang=en");

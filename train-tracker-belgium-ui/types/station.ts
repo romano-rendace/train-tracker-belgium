@@ -6,9 +6,3 @@ export interface Station {
     standardname: string;
     name: string
 }
-
-export interface StationApiResponse {
-    station: Station[];
-    timeStamp: number;
-    version: string;
-}

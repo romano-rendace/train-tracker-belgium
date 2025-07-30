@@ -23,7 +23,7 @@ export default function StationSelect({
             >
                 <option value="">-- Choose a station --</option>
                 {stations.map((station) => (
-                    <option key={station["id"]} value={station.name}>
+                    <option key={station["id"]} value={station.id}>
                         {station.name}
                     </option>
                 ))}
