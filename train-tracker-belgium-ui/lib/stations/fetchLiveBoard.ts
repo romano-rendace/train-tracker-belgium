@@ -13,10 +13,6 @@ export async function fetchLiveBoard(stationId: string): Promise<LiveBoard> {
 
     const data: LiveBoardApiResponse = await result.json();
 
-    if(!Array.isArray(data.departures.departure)) {
-        throw new Error("Invalid departure data format");
-    }
-
     return ({
         station: data.station,
         timestamp: data.timestamp,
@@ -24,8 +20,8 @@ export async function fetchLiveBoard(stationId: string): Promise<LiveBoard> {
             time: d.time,
             delay: d.delay,
             platform: Number(d.platforminfo.name),
-            left: Boolean(d.left),
-            canceled: Boolean(d.canceled),
+            departed: d.left === 1,
+            canceled: d.canceled === 1,
             destination: d.station,
             vehicleName: d.vehicleinfo.shortname,
             vehicleId: d.vehicle

@@ -14,7 +14,7 @@ function formatTime(unixTime: number) : string {
 function formatDelay(delayedSeconds: number) : string {
     if(!delayedSeconds || delayedSeconds === 0) return "";
     const minutes = Math.round(delayedSeconds / 60);
-    return `+${minutes} min`
+    return minutes > 0 ? `+${minutes} min` : "";
 }
 
 function formatStatus(departure: Departure) : string {

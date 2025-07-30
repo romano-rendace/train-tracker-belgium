@@ -10,9 +10,5 @@ export async function fetchStations(): Promise<Station[]> {
 
     const data: StationApiResponse = await result.json();
 
-    if (!Array.isArray(data.station)) {
-        throw new Error("Invalid station data format");
-    }
-
     return data.station;
 }

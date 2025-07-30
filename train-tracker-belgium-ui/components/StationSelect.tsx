@@ -1,6 +1,6 @@
 "use client";
 
-import { Station } from "../types/stations";
+import { Station } from "../types/station";
 
 type StationSelectProps = {
     stations: Station[];
